@@ -1,0 +1,15 @@
+describe('Max character input functionality', function(){
+    it('displays the appropriate remaining characters count', function(){
+        cy.visit('/example-2')
+        cy.get('span').invoke('text').should('equal', '15')
+        cy.get('input').type('Hello').debug()
+        cy.get('span').invoke('text').should('equal', '10')
+        cy.get('input').type('Hello')
+        cy.get('span').invoke('text').should('equal', '5')
+        cy.get('input').type('Hello')
+        cy.get('span').invoke('text').should('equal', '0')
+        cy.get('input').type('Hello')
+        cy.get('input').should('have.value', 'HelloHelloHello')
+        cy.get('span').invoke('text').should('equal', '0')
+    })
+})
