@@ -1,1 +1,1 @@
-# e2e-javascript-testing-with-cypressio
+# End-to-End JavaScript Testing with Cypress.io
